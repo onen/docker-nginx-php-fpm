@@ -6,6 +6,8 @@ This Docker image aims to produce a starting point for you who wants to serve yo
 
 The PHP PDO extension comes installed by default.
 
-## Build versions
+## Versioning
 
 The build versions will be based on PHP version, and both FPM and NGiNX will be used accordingly so they are compatible with the target PHP version.
+
+The version names are divided by a dash; on the left side the PHP version and on the right side the build version.
