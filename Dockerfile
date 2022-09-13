@@ -1,5 +1,5 @@
 # NGiNX entrypoint build
-FROM php:8.0-cli as entrypointBuild
+FROM php:8.1-cli as entrypointBuild
 
 # prepare entrypoint file
 ADD ./entrypoint.sh /entrypoint.sh
@@ -11,7 +11,7 @@ RUN apt-get update && \
 RUN dos2unix /entrypoint.sh
 
 # FPM + NGiNX server
-FROM php:8.0-fpm as server
+FROM php:8.1-fpm as server
 
 RUN apt-get update -y \
     && apt-get install -y nginx
